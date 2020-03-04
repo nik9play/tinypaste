@@ -1,0 +1,46 @@
+@import "bulma/sass/utilities/_all.sass";
+
+$family-primary: FiraSans, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+@import "bulma";
+@import "buefy/src/scss/buefy";
+
+::selection {
+  background: #e7e7e7;
+}
+
+.feather {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.header-anchor {
+  color: #707070;
+  border: 0;
+  opacity: 0;
+  user-select: none;
+  transition: opacity .1s ease-in-out;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  a {
+    color: $text;
+    border-bottom: 2px dashed $grey-light;
+  }
+
+  &:hover {
+    .header-anchor {
+      opacity: 1;
+    }
+  }
+}
+
+a {
+  color: lighten($blue, 5%);
+  border-bottom: 1px dashed lighten($blue, 20%);
+}

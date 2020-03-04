@@ -1,0 +1,39 @@
+{
+  "name": "tinypaste",
+  "version": "1.0.0",
+  "description": "Article publishing platform with encryption and markdown support.",
+  "author": "nik9play",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start --hostname 0.0.0.0 --port 80",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "crypto-js": "^3.2.0",
+    "express": "^4.17.1",
+    "geopattern": "^1.2.3",
+    "highlight.js": "^9.18.0",
+    "joi": "^14.3.1",
+    "katex": "^0.11.1",
+    "lodash": "^4.17.15",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^5.2.5",
+    "markdown-it-task-lists": "^2.1.1",
+    "marked": "^0.8.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.2",
+    "node-sass": "^4.13.1",
+    "nuxt": "^2.0.0",
+    "nuxt-buefy": "^0.3.2",
+    "qs": "^6.9.1",
+    "sass-loader": "^8.0.2",
+    "transliteration": "^2.1.8",
+    "uuid": "^3.4.0",
+    "vue-codemirror": "^4.0.6"
+  },
+  "devDependencies": {}
+}
