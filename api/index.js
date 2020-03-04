@@ -6,7 +6,7 @@ import moment from 'moment'
 import bodyParser from 'body-parser'
 
 mongoose.connect(
-  process.env.MONGODB_HOST,
+  `mongodb://${process.env.MONGODB_HOST}`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
