@@ -5,8 +5,6 @@ import { slugify } from 'transliteration'
 import moment from 'moment'
 import bodyParser from 'body-parser'
 
-mongoose.connect(process.env.MONGODB_STRING)
-
 mongoose.connect(
   process.env.MONGODB_HOST,
   {
