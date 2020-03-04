@@ -5,13 +5,21 @@ import { slugify } from 'transliteration'
 import moment from 'moment'
 import bodyParser from 'body-parser'
 
-//настройки mongoose
-mongoose.set('useNewUrlParser', true)
-mongoose.set('useFindAndModify', false)
-mongoose.set('useCreateIndex', true)
-mongoose.set('useUnifiedTopology', true)
-
 mongoose.connect(process.env.MONGODB_STRING)
+
+mongoose.connect(
+  process.env.MONGODB_HOST,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
+    user: process.env.MONGODB_LOGIN,
+    pass: process.env.MONGODB_PASS, 
+    dbName: 'tinypaste',
+  },
+  err => { throw err; },
+);
 
 const app = express()
 
