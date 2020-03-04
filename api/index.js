@@ -11,7 +11,7 @@ mongoose.set('useFindAndModify', false)
 mongoose.set('useCreateIndex', true)
 mongoose.set('useUnifiedTopology', true)
 
-mongoose.connect('mongodb://192.168.1.56:27017/tinypaste')
+mongoose.connect(process.env.MONGODB_STRING)
 
 const app = express()
 

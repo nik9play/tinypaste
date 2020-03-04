@@ -6,6 +6,9 @@
       "use": "@nuxtjs/now-builder",
       "config": {
         "serverFiles": ["api/**"]
+      },
+      "env": {
+        "MONGODB_STRING": "@mongodbstring"
       }
     }
   ]
