@@ -1,38 +1,30 @@
 import express from 'express'
-import mongoose from 'mongoose'
+import { mongoo, Post } from './db'
 import Joi from 'joi'
 import { slugify } from 'transliteration'
 import moment from 'moment'
 import bodyParser from 'body-parser'
 
-mongoose.connect(
-  `mongodb://${process.env.MONGODB_HOST}`,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
-    user: process.env.MONGODB_LOGIN,
-    pass: process.env.MONGODB_PASS, 
-    dbName: 'tinypaste',
-  },
-  err => { throw err; },
-);
+mongoo()
+
+// mongoose.connect(
+//   `mongodb://${process.env.MONGODB_HOST}`,
+//   {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//     useFindAndModify: false,
+//     useCreateIndex: true,
+//     user: process.env.MONGODB_LOGIN,
+//     pass: process.env.MONGODB_PASS, 
+//     dbName: 'tinypaste',
+//   },
+//   err => { throw err; },
+// )
 
 const app = express()
 
 //схема для постов
-const postSchema = new mongoose.Schema({
-  title: String,
-  content: String,
-  author: String,
-  userId: String,
-  url: String,
-  encryptionEnabled: Boolean,
-  expireAt: Date
-}, { timestamps: true })
 
-const Post = mongoose.model("Post", postSchema)
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 

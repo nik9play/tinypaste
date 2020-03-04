@@ -10,8 +10,6 @@
     }
   ],
   "env": {
-    "MONGODB_HOST": "@mongodb_host",
-    "MONGODB_LOGIN": "@mongodb_login",
-    "MONGODB_PASS": "@mongodb_pass"
+    "MONGODB_URI": "@mongodb_uri"
   }
 }
