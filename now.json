@@ -9,9 +9,7 @@
       }
     }
   ],
-  "build": {
-    "env": {
-      "MONGODB_STRING": "@mongodbstring"
-    }
+  "env": {
+    "MONGODB_STRING": "@mongodbstring"
   }
 }
