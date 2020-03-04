@@ -94,3 +94,5 @@ sw.*
 .now
 
 .editorconfig
+
+yarn.lock
