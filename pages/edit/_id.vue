@@ -129,7 +129,7 @@ export default {
         .then((res) => {
           if (res.data.error) {
             loadingComponent.close()
-            if (res.data.error.name == "ValidationError") {
+            if (res.data.error.type == "string.empty") {
               self.$buefy.toast.open({
                 message: `${_.capitalize(res.data.error.details[0].path[0])} is required.`,
               })

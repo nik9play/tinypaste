@@ -1,6 +1,6 @@
 import express from 'express'
 import { mongoo, Post } from './db'
-import Joi from 'joi'
+import Joi from '@hapi/joi'
 import { slugify } from 'transliteration'
 import moment from 'moment'
 import bodyParser from 'body-parser'
