@@ -15,13 +15,14 @@ export const Post = mongoose.model("Post", postSchema)
 let cachedDb = null
 
 console.log('outside-cachedDB:', cachedDb)
-async function connectToDatabase(uri) {
+
+const connectToDatabase = (uri) => {
   if (cachedDb) {
     console.log('=> using cached database instance')
     return cachedDb
   }
 
-  const db = await mongoose.connect(uri, { useNewUrlParser: true })
+  const db = mongoose.connect(uri, { useNewUrlParser: true })
 
   console.log('New MongoDB Connected')
 
@@ -29,6 +30,13 @@ async function connectToDatabase(uri) {
   return db
 }
 
-export const mongoo =  async () => {
-  await connectToDatabase(process.env.MONGODB_URI)
+export const mongoo = () => {
+  connectToDatabase(process.env.MONGODB_URI, {
+    server: {
+      socketOptions: {
+        socketTimeoutMS: 0,
+        connectTimeoutMS : 30000
+      }
+    }
+  })
 }

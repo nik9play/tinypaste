@@ -5,36 +5,20 @@ import { slugify } from 'transliteration'
 import moment from 'moment'
 import bodyParser from 'body-parser'
 
-mongoo()
-
-// mongoose.connect(
-//   `mongodb://${process.env.MONGODB_HOST}`,
-//   {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useFindAndModify: false,
-//     useCreateIndex: true,
-//     user: process.env.MONGODB_LOGIN,
-//     pass: process.env.MONGODB_PASS, 
-//     dbName: 'tinypaste',
-//   },
-//   err => { throw err; },
-// )
-
 const app = express()
-
-//схема для постов
 
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
 app.get('/get/:url', (req, res) => {
+  mongoo()
   Post.findOne({url: req.params.url}, (err, docs) => {
     res.send(docs)
   }).select("-userId")
 })
 
 app.get('/checkuser/:userId/:postUrl', (req, res) => {
+  mongoo()
   Post.findOne({url: req.params.postUrl}, (err, docs) => {
     if (err) return res.send({error: { name: "checkUserError", details: [{message: err}] }})
     if (docs) {
@@ -50,6 +34,7 @@ app.get('/checkuser/:userId/:postUrl', (req, res) => {
 })
 
 app.put('/update', urlencodedParser, (req, res) => {
+  mongoo()
   const validateSchema = Joi.object({
     title: Joi.string().min(3).max(128).required(),
     content: Joi.string().min(3).max(10000).required(),
@@ -95,6 +80,7 @@ app.put('/update', urlencodedParser, (req, res) => {
 })
 
 app.delete('/delete/:userId/:postUrl', (req,res) => {
+  mongoo()
   Post.findOne({url: req.params.postUrl}, (err, docs) => {
     if (err) return res.send({error: { name: "removeError", details: [{message: err}] }})
     if (docs) {
@@ -121,6 +107,7 @@ const generateUniqueTitleId = (length) => {
 }
 
 app.post('/create', urlencodedParser, (req, res) => {
+  mongoo()
   const validateSchema = Joi.object({
     title: Joi.string().min(3).max(128).required(),
     content: Joi.string().min(3).max(50000).required(),
