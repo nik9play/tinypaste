@@ -2,7 +2,7 @@
 
 > Article publishing platform with encryption and markdown support.
 
-[![Trello](https://img.shields.io/badge/trello-tinypaste-orange?style=for-the-badge&logo=trello)](https://trello.com/b/SIVDo3M0/tinypaste)
+[![Trello](https://img.shields.io/badge/trello-tinypaste-orange?logo=trello)](https://trello.com/b/SIVDo3M0/tinypaste) [![CodeFactor](https://www.codefactor.io/repository/github/nik9play/tinypaste/badge)](https://www.codefactor.io/repository/github/nik9play/tinypaste)
 
 ## Build Setup
 
