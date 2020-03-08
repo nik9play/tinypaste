@@ -2,6 +2,8 @@
 
 > Article publishing platform with encryption and markdown support.
 
+The project is still in alpha state.
+
 [![Trello](https://img.shields.io/badge/trello-tinypaste-orange?logo=trello)](https://trello.com/b/SIVDo3M0/tinypaste) [![CodeFactor](https://www.codefactor.io/repository/github/nik9play/tinypaste/badge)](https://www.codefactor.io/repository/github/nik9play/tinypaste)
 
 ## Build Setup
@@ -16,6 +18,12 @@ $ yarn dev
 # build for production and launch server
 $ yarn build
 $ yarn start
+
+# deploy to now
+$ now
+
+# deploy to now production
+$ now --prod
 
 # generate static project
 $ yarn generate
