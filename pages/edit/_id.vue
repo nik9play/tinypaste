@@ -168,7 +168,7 @@ html {
 }
 
 code {
-  font-family: 'FiraCode', monospace
+  font-family: 'Fira Code', monospace
 }
 
 .button-remove {

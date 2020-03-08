@@ -153,7 +153,7 @@ export default {
 }
 
 .post-body-edit {
-  font-family: 'FiraCode', monospace;
+  font-family: 'Fira Code', monospace;
   border: none;
   padding: 0;
   margin: 0;
@@ -173,7 +173,7 @@ export default {
 }
 
 code {
-  font-family: 'FiraCode', monospace;
+  font-family: 'Fira Code', monospace;
 }
 
 .content pre {
@@ -182,7 +182,7 @@ code {
 
 .CodeMirror {
   height: 100%!important;
-  font-family: 'FiraCode', monospace!important;
+  font-family: 'Fira Code', monospace!important;
   font-size: 0.8rem!important
 }
 

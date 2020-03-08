@@ -1,41 +1,43 @@
-@font-face {
-  font-family: 'FiraCode';
-  src: url("/fonts/FiraCode-Regular.woff2");
-  font-weight: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css?family=Fira+Code:400,700|Literata:400,700&display=swap&subset=cyrillic');
 
-@font-face {
-  font-family: 'FiraCode';
-  src: url("/fonts/FiraCode-Bold.woff2");
-  font-weight: bold;
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'FiraCode';
+//   src: url("/fonts/FiraCode-Regular.woff2");
+//   font-weight: normal;
+//   font-display: swap;
+// }
 
-@font-face {
-  font-family: 'Literata';
-  src: url('/fonts/Literata-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'FiraCode';
+//   src: url("/fonts/FiraCode-Bold.woff2");
+//   font-weight: bold;
+//   font-display: swap;
+// }
 
-@font-face {
-  font-family: 'Literata';
-  src: url('/fonts/Literata-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'Literata';
+//   src: url('/fonts/Literata-Bold.woff2') format('woff2');
+//   font-weight: bold;
+//   font-display: swap;
+// }
 
-@font-face {
-  font-family: 'FiraSans';
-  src: url('/fonts/FiraSans-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'Literata';
+//   src: url('/fonts/Literata-Regular.woff2') format('woff2');
+//   font-weight: normal;
+//   font-display: swap;
+// }
 
-@font-face {
-  font-family: 'FiraSans';
-  src: url('/fonts/FiraSans-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'FiraSans';
+//   src: url('/fonts/FiraSans-Bold.woff2') format('woff2');
+//   font-weight: bold;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'FiraSans';
+//   src: url('/fonts/FiraSans-Regular.woff2') format('woff2');
+//   font-weight: normal;
+//   font-display: swap;
+// }
