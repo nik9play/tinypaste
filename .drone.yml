@@ -7,3 +7,7 @@ steps:
   commands:
   - npm install
   - npm start
+
+trigger:
+  branch:
+  - master
