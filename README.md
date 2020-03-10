@@ -19,12 +19,6 @@ $ yarn dev
 $ yarn build
 $ yarn start
 
-# deploy to now
-$ now
-
-# deploy to now production
-$ now --prod
-
 # generate static project
 $ yarn generate
 ```
