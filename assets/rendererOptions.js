@@ -48,3 +48,17 @@ md.renderer.rules.table_open = (tokens, idx, options, env, self) => {
 md.renderer.rules.table_close = (tokens, idx, options, env, self) => {
   return `</table></div>`
 }
+
+md.renderer.rules.image = function (tokens, idx, options, env, self) {
+  console.log(tokens[idx])
+  const token = tokens[idx]
+  const srcIndex = token.attrIndex('src')
+  const src = token.attrs[srcIndex][1]
+  return `
+  <figure class="image">
+    <a href="${src}" target="_blank" style="border: none">
+      <img src="${src}" alt="${token.content}">
+    </a>
+    </figure>
+  `
+}
