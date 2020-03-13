@@ -95,10 +95,7 @@ export default {
 
   head() {
     return {
-      title: 'tinyPaste — ' + this.title,
-      meta: [
-        { hid: 'description', name: 'description', content: this.content.replace(/(<([^>]+)>)/ig,"").slice(0, 200) }
-      ]
+      title: `${this.title} — tinyPaste`
     }
   }
 }
@@ -106,7 +103,7 @@ export default {
 
 <style lang="scss">
 html {
-  overflow-y: unset;
+  overflow-y: auto;
 }
 
 .post-title, .post-body, .post-author {
