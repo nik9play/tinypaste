@@ -22,7 +22,7 @@ const connectToDatabase = (uri) => {
     return cachedDb
   }
 
-  const db = mongoose.connect(uri, { useNewUrlParser: true })
+  const db = mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
   console.log('New MongoDB Connected')
 
