@@ -16,7 +16,7 @@
     "body-parser": "^1.19.0",
     "crypto-js": "^3.2.0",
     "express": "^4.17.1",
-    "highlight.js": "^9.18.0",
+    "highlight.js": "^10.1.2",
     "katex": "^0.11.1",
     "lodash": "^4.17.15",
     "markdown-it": "^10.0.0",
