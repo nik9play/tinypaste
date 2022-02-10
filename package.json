@@ -24,7 +24,7 @@
     "markdown-it-task-lists": "^2.1.1",
     "moment": "^2.24.0",
     "mongoose": "^5.9.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
     "qs": "^6.9.1",
