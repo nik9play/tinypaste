@@ -27,7 +27,7 @@
     "node-sass": "^4.13.1",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
-    "qs": "^6.9.1",
+    "qs": "^6.9.7",
     "sass-loader": "^8.0.2",
     "transliteration": "^2.1.8",
     "uuid": "^3.4.0",
